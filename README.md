@@ -1,8 +1,8 @@
 # lemoras planet space - development environment - devops 
 
-first step: Install Oracle VirtualBox 'sudo apt-get install virtualbox'
+first step: Install Oracle VirtualBox `sudo apt-get install virtualbox`
 
-second step: Install Vagrant 'sudo apt-get install vagrant'
+second step: Install Vagrant `sudo apt-get install vagrant`
 
 last step: Clone repo and run `vagrant up`
 
