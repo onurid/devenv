@@ -2,19 +2,13 @@
 
 FROM httpd:2.4
 
+RUN git clone https://github.com/osmanonuryasar/backoffice.git
+
 WORKDIR /var/www/html/
 
-COPY /app ./app
-COPY /assets ./assets
-COPY index.html .
+COPY /backoffice .
 
-# CMD [“docker build -t my-apache2 ."]
-# RUN docker run -dit --name my-running-app -p 80:80 my-apache2"]
+COPY backoffice.apache.conf /usr/local/apache2/conf/backoffice.apache.conf
 
-# EXPOSE 80
-
-
-# Copy apache vhost file to proxy php requests to php-fpm container
-COPY demo.apache.conf /usr/local/apache2/conf/demo.apache.conf
-RUN echo "Include /usr/local/apache2/conf/demo.apache.conf" \
+RUN echo "Include /usr/local/apache2/conf/backoffice.apache.conf" \
     >> /usr/local/apache2/conf/httpd.conf

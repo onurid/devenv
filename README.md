@@ -1,11 +1,12 @@
-# lemoras development environment
+# lemoras planet space - development environment - devops 
 
+first step: Install Oracle VirtualBox 'sudo apt-get install virtualbox'
 
-Install Oracle VirtualBox and Vagrant,
+second step: Install Vagrant 'sudo apt-get install vagrant'
 
-Clone repo and run `vagrant up dev`
+last step: Clone repo and run `vagrant up`
 
-Just docker;
+Just docker:
 Clone repo, shell 'cd src' and run `docker-compose up`
 
 Web: https://www.lemoras.com
