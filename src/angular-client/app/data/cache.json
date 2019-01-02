@@ -1,0 +1,92 @@
+{
+  "app": {
+    "id": "1",
+    "userId": "1",
+    "typeId": "1",
+    "name": "Lemoras"
+  },
+  "appType": [
+    {
+      "id": "1",
+      "name": "B2B - CMS",
+      "isbackoffice": "true"
+    },
+    {
+      "id": "2",
+      "name": "B2C - CMS",
+      "isbackoffice": "false"
+    },
+    {
+      "id": "1",
+      "name": "B2B - CRM",
+      "isbackoffice": "true"
+    },
+    {
+      "id": "2",
+      "name": "B2C - CRM",
+      "isbackoffice": "false"
+    },
+    {
+      "id": "1",
+      "name": "B2B - E-Commerce",
+      "isbackoffice": "true"
+    },
+    {
+      "id": "2",
+      "name": "B2C - E-Commerce",
+      "isbackoffice": "false"
+    }
+  ],
+  "typeModule": [
+    {
+      "id": "1",
+      "typeId": "1",
+      "moduleId": "1"
+    },
+    {
+      "id": "2",
+      "typeId": "1",
+      "moduleId": "2"
+    }
+  ],
+  "module": [
+    {
+      "id": "1",
+      "name": "payment"
+    },
+    {
+      "id": "2",
+      "name": "account"
+    }
+  ],
+  "route": [
+    {
+      "id": "1",
+      "name": "/paymenthistory",
+      "templateUrl": "assets/app/module/payment/peymenthistory.view.html",
+      "controllerUrl": "assets/app/module/payment/peymenthistory.controller.html",
+      "controller": "PaymentHistoryController",
+      "controllerAs": "vm"
+    },
+    {
+      "id": "2",
+      "name": "/paymentmethod",
+      "templateUrl": "assets/app/module/payment/paymentmethod.view.html",
+      "controllerUrl": "assets/app/module/payment/paymentmethod.controller.html",
+      "controller": "PaymentMethodController",
+      "controllerAs": "vm"
+    }
+  ],
+  "moduleroute": [
+    {
+      "id": "1",
+      "moduleId": "1",
+      "route": "1"
+    },
+    {
+      "id": "2",
+      "moduleId": "1",
+      "route": "2"
+    }
+  ]
+}

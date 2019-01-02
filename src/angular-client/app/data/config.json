@@ -1,0 +1,713 @@
+{
+  "root": {
+    "titleName": "Lemoras BackOfficeV1.0",
+    "companyName": "LEMORAS",
+    "route": {
+      "routes": [
+        {
+          "name": "/",
+          "templateUrl": "./app/module/dashboard/dashboard.view.html",
+          "controllerUrl": "./app/module/dashboard/dashboard.controller.js",
+          "controller": "DashboardController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/user",
+          "templateUrl": "./app/module/account/user.view.html",
+          "controllerUrl": "./app/module/account/user.controller.js",
+          "controller": "UserController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/address",
+          "templateUrl": "./app/module/account/address.view.html",
+          "controllerUrl": "./app/module/account/address.controller.js",
+          "controller": "AddressController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/order",
+          "templateUrl": "./app/module/account/order.view.html",
+          "controllerUrl": "./app/module/account/order.controller.js",
+          "controller": "OrderController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/bill",
+          "templateUrl": "./app/module/account/bill.view.html",
+          "controllerUrl": "./app/module/account/bill.controller.js",
+          "controller": "BillController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/myproduct",
+          "templateUrl": "./app/module/myproduct/myproduct.view.html",
+          "controllerUrl": "./app/module/myproduct/myproduct.controller.js",
+          "controller": "MyProductController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/buyproduct",
+          "templateUrl": "./app/module/buyproduct/buyproduct.view.html",
+          "controllerUrl": "./app/module/buyproduct/buyproduct.controller.js",
+          "controller": "BuyProductController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/paymenthistory",
+          "templateUrl": "./app/module/payment/paymenthistory.view.html",
+          "controllerUrl": "./app/module/payment/paymenthistory.controller.js",
+          "controller": "PaymentHistoryController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/paymentmethod",
+          "templateUrl": "./app/module/payment/paymentmethod.view.html",
+          "controllerUrl": "./app/module/payment/paymentmethod.controller.js",
+          "controller": "PaymentMethodController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/leavemessage",
+          "templateUrl": "./app/module/support/leavemessage.view.html",
+          "controllerUrl": "./app/module/support/leavemessage.controller.js",
+          "controller": "LeaveMessageController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/callus",
+          "templateUrl": "./app/module/support/callus.view.html",
+          "controllerUrl": "./app/module/support/callus.controller.js",
+          "controller": "CallUsController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/buycredit",
+          "templateUrl": "./app/module/consultancyservice/buycredit.view.html",
+          "controllerUrl": "./app/module/consultancyservice/buycredit.controller.js",
+          "controller": "BuyCreditController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/mysession",
+          "templateUrl": "./app/module/consultancyservice/mysession.view.html",
+          "controllerUrl": "./app/module/consultancyservice/mysession.controller.js",
+          "controller": "MySessionController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/organizemeeting",
+          "templateUrl": "./app/module/consultancyservice/organizemeeting.view.html",
+          "controllerUrl": "./app/module/consultancyservice/organizemeeting.controller.js",
+          "controller": "OrganizeMeetingController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/settings",
+          "templateUrl": "./app/module/settings/settings.view.html",
+          "controllerUrl": "./app/module/settings/settings.controller.js",
+          "controller": "SettingsController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/search",
+          "templateUrl": "./app/module/search/search.view.html",
+          "controllerUrl": "./app/module/search/search.controller.js",
+          "controller": "SearchController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/aboutus",
+          "templateUrl": "./app/module/lemoras/aboutus.view.html",
+          "controllerUrl": "./app/module/lemoras/aboutus.controller.js",
+          "controller": "AboutUsController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/lemoras",
+          "templateUrl": "./app/module/lemoras/lemoras.view.html",
+          "controllerUrl": "./app/module/lemoras/lemoras.controller.js",
+          "controller": "LemorasController",
+          "controllerAs": "vm"
+        },
+        {
+          "name": "/license",
+          "templateUrl": "./app/module/lemoras/license.view.html",
+          "controllerUrl": "./app/module/lemoras/license.controller.js",
+          "controller": "LicenseController",
+          "controllerAs": "vm"
+        }
+      ],
+      "default": "/" 
+    },
+    "navList": [
+      {
+        "value": "Dashboard",
+        "label": "",
+        "icon": "dashboard",
+        "link": "#!/dashboard",
+        "tag": "Dashboard",
+        "index": 0,
+        "list": [
+          
+        ]
+      },
+      {
+        "value": "Account",
+        "label": "",
+        "icon": "person",
+        "link": "#",
+        "tag": "Account",
+        "index": 1,
+        "list": [
+          {
+            "value": "User Profile",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#!/user",
+            "tag": "UserProfile",
+            "index": 0,
+            "list": [
+              
+            ]
+          },
+          {
+            "value": "My Addresses",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#!/address",
+            "tag": "Addresses",
+            "index": 1,
+            "list": [
+              
+            ]
+          },
+          {
+            "value": "Old Orders",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#!/order",
+            "tag": "OldOrder",
+            "index": 2,
+            "list": [
+              
+            ]
+          },
+          {
+            "value": "Bills",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#!/bill",
+            "tag": "bills",
+            "index": 3,
+            "list": [
+              
+            ]
+          }
+        ]
+      },
+      {
+        "value": "My Products",
+        "label": "",
+        "icon": "local_mall",
+        "link": "#!/myproduct",
+        "tag": "MyProducts",
+        "index": 2,
+        "list": [
+          
+        ]
+      },
+      {
+        "value": "Buy Products",
+        "label": "",
+        "icon": "shopping_cart",
+        "link": "#!/buyproduct",
+        "tag": "BuyProduct",
+        "index": 3,
+        "list": [
+          
+        ]
+      },
+      {
+        "value": "Consultancy Service",
+        "label": "",
+        "icon": "supervisor_account",
+        "link": "#",
+        "tag": "ConsultancyServices",
+        "index": 4,
+        "list": [
+          {
+            "value": "My Sessions",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#!/mysession",
+            "tag": "MySessions",
+            "index": 0,
+            "list": [
+              
+            ]
+          },
+          {
+            "value": "Organize Meeting",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#!/organizemeeting",
+            "tag": "OrganizeMeeting",
+            "index": 1,
+            "list": [
+              
+            ]
+          },
+          {
+            "value": "Buy Credit Session",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#!/buycredit",
+            "tag": "BuyCreditSession",
+            "index": 2,
+            "list": [
+              
+            ]
+          }
+        ]
+      },
+      {
+        "value": "Payment",
+        "label": "",
+        "icon": "payment",
+        "link": "#",
+        "tag": "Payment",
+        "index": 5,
+        "list": [
+          {
+            "value": "Payment History",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#!/paymenthistory",
+            "tag": "PaymentHistory",
+            "index": 0,
+            "list": [
+              
+            ]
+          },
+          {
+            "value": "Payment Method",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#!/paymentmethod",
+            "tag": "PaymentMethod",
+            "index": 1,
+            "list": [
+              
+            ]
+          }
+        ]
+      },
+      {
+        "value": "Support",
+        "label": "",
+        "icon": "contact_support",
+        "link": "#",
+        "tag": "Support",
+        "index": 6,
+        "list": [
+          {
+            "value": "Leave a Message",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#!/leavemessage",
+            "tag": "LeaveMessage",
+            "index": 0,
+            "list": [
+              
+            ]
+          },
+          {
+            "value": "Call Us",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#!/callus",
+            "tag": "CallUs",
+            "index": 1,
+            "list": [
+              
+            ]
+          }
+        ]
+      },
+      {
+        "value": "Logout",
+        "label": "",
+        "icon": "power_settings_new",
+        "link": "#!/logout",
+        "tag": "LogOut",
+        "index": 7,
+        "list": [
+          
+        ]
+      }
+    ],
+    "userNavList": [
+      {
+        "value": "Stats",
+        "label": "",
+        "icon": "dashboard",
+        "link": "#!/dashboard",
+        "tag": "",
+        "index": 0,
+        "list": [
+          
+        ]
+      },
+      {
+        "value": "Notifications",
+        "label": "",
+        "icon": "notifications",
+        "link": "#",
+        "tag": "Notifications",
+        "index": 1,
+        "list": [
+          {
+            "value": "Mike John responded to your email",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#",
+            "tag": "",
+            "index": 0,
+            "list": [
+              
+            ]
+          },
+          {
+            "value": "You have 5 new tasks",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#",
+            "tag": "",
+            "index": 1,
+            "list": [
+              
+            ]
+          },
+          {
+            "value": "You're now friend with Andrew",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#",
+            "tag": "",
+            "index": 2,
+            "list": [
+              
+            ]
+          },
+          {
+            "value": "Another Notification",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#",
+            "tag": "",
+            "index": 3,
+            "list": [
+              
+            ]
+          },
+          {
+            "value": "Another One",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#",
+            "tag": "",
+            "index": 4,
+            "list": [
+              
+            ]
+          }
+        ]
+      },
+      {
+        "value": "Account",
+        "label": "",
+        "icon": "person",
+        "link": "#",
+        "tag": "UserAccount",
+        "index": 2,
+        "list": [
+          {
+            "value": "Profile",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#!/user",
+            "tag": "UserProfile",
+            "index": 0,
+            "list": [
+              
+            ]
+          },
+          {
+            "value": "Settings",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#!/settings",
+            "tag": "settings",
+            "index": 1,
+            "list": [
+              
+            ]
+          },
+          {
+            "value": "Log out",
+            "label": "",
+            "icon": "dropdown-item",
+            "link": "#!/logout",
+            "tag": "LogOut",
+            "index": 2,
+            "list": [
+              
+            ]
+          }
+        ]
+      }
+    ],
+    "footerMenuList": [
+      {
+        "value": "Lemoras",
+        "link": "#!/lemoras",
+        "index": 0,
+        "list": [
+          
+        ]
+      },
+      {
+        "value": "About Us",
+        "link": "#!/aboutus",
+        "index": 1,
+        "list": [
+          
+        ]
+      },
+      {
+        "value": "Liceses",
+        "link": "#!/license",
+        "index": 2,
+        "list": [
+          
+        ]
+      }
+    ],
+    "searchBox": {
+      "value": "Search...",
+      "label": "",
+      "icon": "search",
+      "link": "#!/search/:id",
+      "tag": "SearchBox",
+      "index": 0,
+      "list": [
+        
+      ]
+    }
+  },
+  "module": {
+    "userProfile": {
+    "caption": "Edit Profile",
+    "label": "Complete your profile",
+    "username": "Username (disabled)",
+    "email": "E-mail",
+    "company": "Company",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "address": "Address",
+    "city": "City",
+    "country": "Country",
+    "posCode": "Postal Code",
+    "aboutme": "About Me",
+    "aboutmeLabel": "Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.",
+    "btnProfileUpdate": "Update Profile",
+    "passwdLogo": "./assets/img/faces/key2.png",
+    "passwdPowered": "Powered by zoe",
+    "passwdCaption": "Change Password",
+    "currentPasswd": "Current Passwod",
+    "passwd": "Password",
+    "rePasswd": "Re-Password",
+    "btnPasswdChange": "Change"
+    },
+    "myAddresses": {
+    "compose": {
+      "caption": "Create new address",
+      "label": "Complete your adress",
+      "addressType": "Address Type/Name",
+      "address": "Address",
+      "county": "County",
+      "city": "City",
+      "country": "Country",
+      "posCode": "Postal Code",
+      "btnAddressAdd": "Add Address"
+    },
+    "list": {
+      "caption": "My Addresses",
+      "label": "Here is a subtitle for this table",
+      "properties": [
+        {
+          "name": "ID",
+          "index": 0
+        },
+        {
+          "name": "Type/Name",
+          "index": 1
+        },
+        {
+          "name": "County",
+          "index": 2
+        },
+        {
+          "name": "City",
+          "index": 3
+        },
+        {
+          "name": "Address",
+          "index": 4
+        }
+      ]
+    }
+    },
+    "oldOrders": {
+    "list": {
+      "caption": "My Past Orders",
+      "label": "Old Orders",
+      "properties": [
+        {
+          "name": "Order Id",
+          "index": 0
+        },
+        {
+          "name": "Order Date",
+          "index": 1
+        },
+        {
+          "name": "Total Paid",
+          "index": 2
+        }
+      ]
+    },
+    "detailList": {
+      "caption": "Order Details",
+      "label": "Chosen order detail list",
+      "properties": [
+        {
+          "name": "Id",
+          "index": 0
+        },
+        {
+          "name": "Product Name",
+          "index": 1
+        },
+        {
+          "county": "Amount",
+          "index": 2
+        },
+        {
+          "name": "Detail",
+          "index": 3
+        },
+        {
+          "name": "Price",
+          "index": 4
+        }
+      ]
+    }
+    },
+    "bills": {
+      
+    },
+    "myProducts": {
+    "caption": "My Products",
+    "label": "List of purchased products",
+    "btnCPanel": "Go Control Panel",
+    "btnManage": "Manage",
+    "exprDate": "Expire date"
+    },
+    "buyProduct": {
+    "caption": "Buy Product",
+    "label": "Buy a new product",
+    "btnBuy": "Buy",
+    "btnDetail": "Detail"
+    },
+    "paymentHistory": {
+    "list": {
+      "caption": "Payment Transaction History",
+      "label": "All Of Transactions",
+      "properties": [
+        {
+          "name": "Transaction ID",
+          "index": 0
+        },
+        {
+          "name": "Transaction Detail",
+          "index": 1
+        },
+        {
+          "name": "Transaction Date",
+          "index": 2
+        },
+        {
+          "name": "Transaction Method",
+          "index": 3
+        },
+        {
+          "name": "Transaction Amount",
+          "index": 4
+        }
+      ]
+    }
+    },
+    "paymentMethod": {
+      
+    },
+    "leaveMessage": {
+    "compose": {
+      "caption": "Compose Message",
+      "label": "Message form",
+      "subject": "Subject",
+      "message": "Message",
+      "messageDetail": "Please, leave the message about that your problems..",
+      "btnMessageSend": "Send Message"      
+    },
+    "list": {
+      "caption": "Message",
+      "label": "Your messages and it that Information about instant status of your messages",
+      "properties": [
+        {
+          "name": "ID",
+          "index": 0
+        },
+        {
+          "name": "Status",
+          "index": 1
+        },
+        {
+          "name": "Subject",
+          "index": 2
+        },
+        {
+          "name": "Message",
+          "index": 3
+        }
+      ]
+    }
+    },
+    "callUs": {
+    "image": "./assets/img/phone-call.png",
+    "caption": "Call Us",
+    "esPhone": "+372 302 72-07",
+    "btnEsCall": "Call Estonia Number",
+    "trPhone": "+90 546 533 40-26",
+    "btnTrCall": "Call Turkey Number",
+    "btnLeaveMessage": "leave a message"
+    },
+    "logout": {
+    "caption": "Logout",
+    "label": "Are you sure want to out of system ?",
+    "btnCancel": "Cancel",
+    "btnLogout": "Logout"
+    }
+  }
+}
