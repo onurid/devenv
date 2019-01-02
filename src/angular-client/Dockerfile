@@ -2,11 +2,14 @@
 
 FROM httpd:2.4
 
-RUN git clone https://github.com/osmanonuryasar/backoffice.git
+MAINTAINER Onur Yasar - Lemoras.com <onurid@yandex.com>
+
+#RUN apt-get update
+RUN apt-get update && apt-get install git -y
 
 WORKDIR /var/www/html/
 
-COPY /backoffice .
+RUN git clone https://github.com/osmanonuryasar/backoffice.git && cp -a ./backoffice/. .
 
 COPY backoffice.apache.conf /usr/local/apache2/conf/backoffice.apache.conf
 

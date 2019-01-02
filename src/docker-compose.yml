@@ -2,7 +2,7 @@
 node1:
     environment:
         - SERVERNAME=node1
-    build: ./python-api
+    build: ./node
     links:
         - redis
     ports:
@@ -10,7 +10,7 @@ node1:
 node2:
     environment:
         - SERVERNAME=node2
-    build: ./python-api
+    build: ./node
     links:
         - redis
     ports:
@@ -18,7 +18,7 @@ node2:
 node3:
     environment:
         - SERVERNAME=node3
-    build: ./python-api    
+    build: ./node    
     links:
         - redis
     ports:
@@ -40,7 +40,7 @@ nginx:
         - node2:node2
         - node3:node3
     ports:
-        - "8080:8088"
+        - "8080:8080"
 
 
         

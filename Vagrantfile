@@ -47,31 +47,32 @@ dev.vm.provision :shell, inline: "sudo apt-get -y update"
 
   end
 
-  # Runtime.
-  config.vm.define "runtime" do | rt |
-     rt.vm.box = "ubuntu/xenial64"
+  # Test.
+  config.vm.define "test" do | test |
+    test.vm.box = "ubuntu/xenial64"
 
     # Forward ports
-    rt.vm.network "forwarded_port", guest: 80, host: 8080 # web server
+    test.vm.network "forwarded_port", guest: 80, host: 8080 # web server
+    test.vm.network "forwarded_port", guest: 8080, host: 8088 # test node & redis 
 
-    rt.vm.provider :virtualbox do |v|
+    test.vm.provider :virtualbox do |v|
       v.gui = false
       v.memory = 1024
       v.cpus = 2
     end
 
-    rt.vm.synced_folder './src', '/vagrant'
+    test.vm.synced_folder './src', '/vagrant'
 
-    rt.vm.provision :shell, inline: "apt-get update"
-    rt.vm.provision :docker
-    rt.vm.provision :docker_compose, yml: "/vagrant/docker-compose.yml", rebuild: true, run: "always"
+    test.vm.provision :shell, inline: "apt-get update"
+    test.vm.provision :docker
+    test.vm.provision :docker_compose, yml: "/vagrant/docker-compose.yml", rebuild: true, run: "always"
   end
 
   #config.vm.provision "shell", inline: "echo Hello, World"
 
 
-  # Test1.
-  config.vm.define "test1" do | dev|
+  # Dev1.
+  config.vm.define "dev1" do | dev|
      dev.vm.box = "ubuntu/bionic64"
      dev.ssh.forward_agent = true
      dev.ssh.forward_x11 = true 
