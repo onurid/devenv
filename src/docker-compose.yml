@@ -1,6 +1,4 @@
-
 api1:
-    container_name: ap1
     environment:
         - SERVERNAME=api1
     build: ./api
@@ -9,7 +7,6 @@ api1:
     ports:
         - "8088"
 api2:
-    container_name: api2
     environment:
         - SERVERNAME=api2
     build: ./api
@@ -17,26 +14,7 @@ api2:
         - redis
     ports:
         - "8088"
-auth1:
-    container_name: auth1
-    environment:
-        - SERVERNAME=auth1
-    build: ./auth    
-    links:
-        - redis
-    ports:
-        - "8082"
-auth2:
-    container_name: auth2
-    environment:
-        - SERVERNAME=auth2
-    build: ./auth    
-    links:
-        - redis
-    ports:
-        - "8082"
 client:
-    container_name: client
     environment:
         - SERVERNAME=client
     build: ./client    
@@ -46,28 +24,10 @@ redis:
     image: redis
     ports:
         - "6379"
-mariadb:
-    container_name: mariadb 
-    image: mariadb
-    restart: always
-    volumes:
-        - ./mysql:/var/lib/mysql
-    environment:
-       MYSQL_ROOT_PASSWORD: root
-       MYSQL_USER: admin
-       MYSQL_PASSWORD: test
-       MYSQL_DATABASE: database
-    ports:
-        - "8889:3306"
 nginx:
     build: ./nginx
     links:
         - api1:node1
         - api2:node2
-        - auth1:node3
-        - auth2:node4
     ports:
         - "80:80"
-
-
-        
