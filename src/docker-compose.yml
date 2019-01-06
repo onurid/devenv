@@ -26,7 +26,7 @@ node3:
 client:
     environment:
         - SERVERNAME=client
-    build: ./angular-client    
+    build: ./client    
     ports:
         - "80:80"
 redis:
