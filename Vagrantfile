@@ -52,8 +52,9 @@ dev.vm.provision :shell, inline: "sudo apt-get -y update"
     test.vm.box = "ubuntu/xenial64"
 
     # Forward ports
+    #test.vm.network "forwarded_port", guest: 80, host: 80 # run with administrator, sudo 
     test.vm.network "forwarded_port", guest: 80, host: 8080 # web server
-    test.vm.network "forwarded_port", guest: 8080, host: 8088 # test node & redis 
+    #test.vm.network "forwarded_port", guest: 8080, host: 80
 
     test.vm.provider :virtualbox do |v|
       v.gui = false
