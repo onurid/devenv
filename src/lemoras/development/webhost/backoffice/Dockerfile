@@ -9,7 +9,7 @@ RUN mkdir -p /conf
 RUN mkdir -p /app
 WORKDIR /app
 
-ENTRYPOINT  ["git", "clone", "https://github.com/osmanonuryasar/backoffice.git"]
+ENTRYPOINT  ["git", "clone", "https://github.com/onurid/backoffice.git"]
 
 
 
