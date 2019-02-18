@@ -1,0 +1,52 @@
+version: '2'
+ 
+services:
+    apigateway:
+        build: ./webapi/apigateway
+        ports:
+            - 8080:8080
+        restart: always   
+        links:
+            - auth:auth
+            - auth2:auth2
+            - order:order
+            - order2:order2
+            - payment:payment
+            - payment2:payment2
+            - communication:communication
+            - communication2:communication2
+        environment:
+            - SERVERNAME=apigateway
+        hostname: apigateway
+    auth:
+        environment:
+            - SERVERNAME=auth
+        build: ./webapi/auth
+    auth2:
+        environment:
+            - SERVERNAME=auth2
+        build: ./webapi/auth
+    order:
+        environment:
+            - SERVERNAME=order
+        build: ./webapi/order
+    order2:
+        environment:
+            - SERVERNAME=order2
+        build: ./webapi/order
+    payment:
+        environment:
+            - SERVERNAME=payment
+        build: ./webapi/payment
+    payment2:
+        environment:
+            - SERVERNAME=payment2
+        build: ./webapi/payment
+    communication:
+        environment:
+            - SERVERNAME=communication
+        build: ./webapi/communication
+    communication2:
+        environment:
+            - SERVERNAME=communication2
+        build: ./webapi/communication

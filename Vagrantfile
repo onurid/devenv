@@ -10,6 +10,8 @@ end
 
 Vagrant.configure("2") do |config|
   
+  config.vm.network :private_network, ip: "192.168.68.8"
+  
   # Development.
   config.vm.define "dev" do | dev|
      dev.vm.box = "ubuntu/bionic64"

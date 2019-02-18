@@ -1,0 +1,20 @@
+version: '2'
+ 
+services:
+    reverseproxy:
+        build: ./gateway/reverseproxy
+        ports:
+            - 80:80
+        restart: always  
+    nginx:
+        depends_on:
+            - reverseproxy
+        image: nginx:alpine
+        restart: always
+    apache:
+        depends_on:
+            - reverseproxy
+        build: ./gateway/apache
+        restart: always    
+        volumes:
+            - ./gateway/apache/www:/var/www

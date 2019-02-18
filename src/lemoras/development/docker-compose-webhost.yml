@@ -1,0 +1,11 @@
+version: '2'
+ 
+services:
+    backoffice:
+        depends_on:
+            - reverseproxy
+        environment:
+            - SERVERNAME=backoffice
+        build: ./webhost/backoffice
+        volumes:
+            - ./gateway/apache/www:/app
